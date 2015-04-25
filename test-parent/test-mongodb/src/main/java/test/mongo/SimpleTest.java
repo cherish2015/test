@@ -11,6 +11,7 @@ public class SimpleTest {
 		test();
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static void test(){
 		Mongo mg = null;
 		try {
