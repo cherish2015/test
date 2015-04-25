@@ -82,5 +82,10 @@
 		<module>../test-mybatis</module>
 		<module>../test-mybatis-spring</module>
     <module>test-activemq</module>
+    <module>test-spring-batch</module>
+    <module>test-java</module>
+    <module>test-logback</module>
+    <module>test-commons-io</module>
+    <module>test-spring-mvc</module>
   </modules>
 </project>
