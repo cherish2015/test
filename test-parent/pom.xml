@@ -90,5 +90,6 @@
     <module>test-commons-io</module>
     <module>test-spring-mvc</module>
     <module>test-mongodb</module>
+    <module>test-hadoop</module>
 	</modules>
 </project>
