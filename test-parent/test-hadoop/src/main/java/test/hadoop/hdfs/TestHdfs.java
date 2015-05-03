@@ -16,16 +16,19 @@ import org.apache.hadoop.io.IOUtils;
 
 @SuppressWarnings("unused")
 public class TestHdfs {
+	
+	static {
+		System.setProperty("hadoop.home.dir", "E:/hadoop/hadoop-2.6.0");
+		URL.setURLStreamHandlerFactory(new FsUrlStreamHandlerFactory());		
+	}
 
 	public static void main(String[] args) {
-		System.setProperty("hadoop.home.dir", "E:/hadoop/hadoop-2.6.0");
-		testCopyLocaleToHDFS();
+		testHdfs();
 	}
 	
 	private static void testHdfs(){
-		String urlStr = "hdfs://192.168.1.104:9000/hello";
+		String urlStr = "hdfs://192.168.1.200:9000/hello";
 		InputStream in = null;
-		URL.setURLStreamHandlerFactory(new FsUrlStreamHandlerFactory());
 		try {
 			URL url = new URL(urlStr);
 			in = url.openStream();
@@ -38,7 +41,7 @@ public class TestHdfs {
 	private static void testFileSystem(){
 		URI uri;
 		try {
-			uri = new URI("hdfs://192.168.1.104:9000/");
+			uri = new URI("hdfs://192.168.1.200:9000/");
 			FileSystem fs = FileSystem.get(uri, new Configuration());
 			fs.mkdirs(new Path("/test"));
 		} catch (Exception e) {
@@ -49,7 +52,7 @@ public class TestHdfs {
 	private static void testCopyLocaleToHDFS(){
 		URI uri;
 		try {
-			uri = new URI("hdfs://192.168.1.104:9000/");
+			uri = new URI("hdfs://192.168.1.200:9000/");
 			FileSystem fs = FileSystem.get(uri, new Configuration());
 			Path src = new Path("c:/ftnstat.stat");
 			Path dst = new Path("/test");
