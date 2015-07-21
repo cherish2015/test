@@ -103,5 +103,8 @@
     <module>test-spring-mvc</module>
     <module>test-mongodb</module>
     <module>test-hadoop</module>
+    <module>test-guava</module>
+    <module>test-spring</module>
+    <module>test-spark</module>
 	</modules>
 </project>

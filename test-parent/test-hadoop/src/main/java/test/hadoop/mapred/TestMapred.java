@@ -43,7 +43,7 @@ public class TestMapred extends Configured implements Tool{
 		job.setJarByClass(TestMapred.class);
 		
 		FileInputFormat.addInputPath(job, new Path("hdfs://hadoop:9000/user/hadoop/input"));
-		FileOutputFormat.setOutputPath(job, new Path("hdfs://hadoop:9000/user/hadoop/output3"));
+		FileOutputFormat.setOutputPath(job, new Path("hdfs://hadoop:9000/user/hadoop/output4"));
 		
 		job.setMapperClass(Map.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
